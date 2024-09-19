@@ -3,32 +3,6 @@ const email = 'norapo2550@sigmazon.com';
 const password = '123456';
 let url;
 
-const fs = require('fs');
-const path = require('path');
-
-function mostrarArchivos(directorio) {
-    fs.readdir(directorio, (err, archivos) => {
-        if (err) throw err;
-
-        archivos.forEach(archivo => {
-            const rutaCompleta = path.join(directorio, archivo);
-
-            fs.stat(rutaCompleta, (err, stats) => {
-                if (err) throw err;
-
-                if (stats.isDirectory()) {
-                    mostrarArchivos(rutaCompleta);  // Recursión para subdirectorios
-                } else {
-                    console.log(rutaCompleta);  // Mostrar archivos
-                }
-            });
-        });
-    });
-}
-
-mostrarArchivos('/');  // Cambiá el directorio base si es necesario
-
-
 (async () => {
     const browser = await puppeteer.launch({
         headless: 'shell',
