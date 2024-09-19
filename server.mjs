@@ -1,4 +1,6 @@
 // server.mjs
+const port = process.env.PORT || 4000;
+
 import { createServer } from 'node:http';
 
 const server = createServer((req, res) => {
@@ -7,7 +9,7 @@ const server = createServer((req, res) => {
 });
 
 // starts a simple http server locally on port 3000
-server.listen(3000, '127.0.0.1', () => {
+server.listen(port, '127.0.0.1', () => {
     console.log('Listening on 127.0.0.1:3000');
 });
 
