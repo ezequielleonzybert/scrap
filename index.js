@@ -4,7 +4,7 @@ const password = '123456';
 let url;
 
 (async () => {
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch();
     const page = await browser.newPage();
     console.log("login in");
     url = 'https://www.correoargentino.com.ar/MiCorreo/public/';
