@@ -1,3 +1,16 @@
+import express from 'express';
+
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+    res.send('App is running');
+});
+
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Server is running on port ${port}`);
+});
+
 import puppeteer from 'puppeteer';
 // Or import puppeteer from 'puppeteer-core';
 
