@@ -50,6 +50,7 @@ let url;
         precio = await page.evaluate(() => {
             return document.querySelector('#CLASICO').innerText;
         });
+        console.log('cargando...');
     }
 
     console.log('Precio:', precio);
