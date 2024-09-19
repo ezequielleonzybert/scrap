@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm i puppeteer",
+    "build": "npm i puppeteer && npx puppeteer browsers install",
     "start": "node test.mjs"
   },
   "author": "",
