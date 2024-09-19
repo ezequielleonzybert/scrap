@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ezequielleonzybert/scrap/issues"
   },
-  "homepage": "https://github.com/ezequielleonzybert/scrap#readme"
+  "homepage": "https://github.com/ezequielleonzybert/scrap#readme",
+  "dependencies": {
+    "pupeteer": "^0.0.1"
+  }
 }
