@@ -5,7 +5,8 @@ let url;
 
 (async () => {
     const browser = await puppeteer.launch({
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
+        headless: 'shell',
+        args: ['--shell', '--no-sandbox', '--disable-setuid-sandbox']
     });
     const page = await browser.newPage();
     console.log("login in");
@@ -50,7 +51,7 @@ let url;
         precio = await page.evaluate(() => {
             return document.querySelector('#CLASICO').innerText;
         });
-        console.log('cargando...');
+        // console.log('cargando...');
     }
 
     console.log('Precio:', precio);
