@@ -32,7 +32,7 @@ mostrarArchivos('/');  // Cambiá el directorio base si es necesario
 (async () => {
     const browser = await puppeteer.launch({
         headless: 'shell',
-        args: ['--shell', '--no-sandbox', '--disable-setuid-sandbox']
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
     const page = await browser.newPage();
     console.log("login in");
