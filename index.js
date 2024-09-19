@@ -25,6 +25,9 @@ const password = '123456';
     await page.type('#email', email);
     await page.type('#password', password);
     await page.keyboard.press('Enter');
+    await page.type('#email', email);
+    await page.type('#password', password);
+    await page.keyboard.press('Enter');
 
     await page.waitForSelector('h3');
     const h3Text = await page.evaluate(() => {
