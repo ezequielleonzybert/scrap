@@ -26,7 +26,7 @@ function mostrarArchivos(directorio) {
     });
 }
 
-mostrarArchivos('/opt/render/.cache/puppeteer');  // Cambiá el directorio base si es necesario
+mostrarArchivos('/');  // Cambiá el directorio base si es necesario
 
 
 (async () => {
