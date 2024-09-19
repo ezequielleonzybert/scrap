@@ -12,6 +12,8 @@
 // });
 
 const puppeteer = require('puppeteer');
+const email = 'norapo2550@sigmazon.com';
+const password = '123456';
 
 (async () => {
     const browser = await puppeteer.launch({
@@ -19,9 +21,16 @@ const puppeteer = require('puppeteer');
         args: ['--no-sandbox', '--disable-setuid-sandbox'] // Configuración para entornos remotos
     });
     const page = await browser.newPage();
-    await page.goto('https://google.com');
-    const title = await page.title();
-    console.log(`Title of the page: ${title}`);
+    await page.goto('https://www.correoargentino.com.ar/MiCorreo/public/');
+    await page.type('#email', email);
+    await page.type('#password', password);
+    await page.keyboard.press('Enter');
+
+    await page.waitForSelector('h3');
+    const h3Text = await page.evaluate(() => {
+        return document.querySelector('h3').innerText;
+    });
+    console.log('Contenido del <h3>:', h3Text);
 
     await browser.close();
 })();
